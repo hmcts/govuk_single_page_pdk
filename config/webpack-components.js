@@ -1,25 +1,21 @@
 var helpers = require('./helpers');
 var webpack = require('webpack');
 var rucksack = require('rucksack-css');
-var NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
   debug: false,
   devtool: false,
   entry: {
-    'angularjs-components': './src/angularjs-components.ts'
+    'pdk-components': './src/pdk-components.module.ts'
   },
   resolve: {
     extensions: ['', '.ts', '.js'],
     modulesDirectories: ['node_modules']
   },
   output: {
-    path: helpers.root('dist/@govuk/angularjs-components'),
+    path: helpers.root('dist/@govuk/pdk-components'),
     filename: '[name].js',
     libraryTarget: 'umd'
-  },
-  externals: {
-    'angular': 'angular'
   },
   module: {
     preLoaders: [
@@ -31,9 +27,6 @@ module.exports = {
       {test: /\.ts$/,   loader: 'awesome-typescript', exclude: [/\.(spec|e2e)\.ts$/]}
     ]
   },
-  plugins: [
-    new NgAnnotatePlugin()
-  ],
   tslint: {
     emitErrors: true,
     failOnHint: true,
