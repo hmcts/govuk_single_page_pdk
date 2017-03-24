@@ -1,0 +1,26 @@
+{
+  "name": "@govuk/pdk-components",
+  "version": "0.0.0",
+  "description": "GOV.UK library of components for Angular (2 and beyond).",
+  "main": "pdk-components.bundle.js",
+  "jsnext:main": "pdk-components.module.js",
+  "module": "pdk-components.module.js",
+  "types": "pdk-components.module.d.ts",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmcts/govuk_single_page_pdk.git"
+  },
+  "keywords": [
+    "govuk",
+    "angular",
+    "pdk"
+  ],
+  "bugs": {
+    "url": "https://github.com/hmcts/govuk_single_page_pdk/issues"
+  },
+  "homepage": "https://github.com/hmcts/govuk_single_page_pdk#readme",
+  "peerDependencies": {
+    "@angular/core": ">=2.0.0"
+  }
+}
