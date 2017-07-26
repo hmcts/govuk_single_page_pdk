@@ -143,12 +143,12 @@ export class DateInputComponent implements ControlValueAccessor, Validator {
   private viewValue(): string {
     if (this.day || this.month || this.year) {
       return [
-        this.year ? this.pad(this.year, 4) : '0000',
-        this.month ? this.pad(this.month) : '00',
-        this.day ? this.pad(this.day) : '00'
+        this.year ? this.pad(this.year, 4) : '',
+        this.month ? this.pad(this.month) : '',
+        this.day ? this.pad(this.day) : ''
       ].join('-') + 'T00:00:00';
     }
-    return undefined;
+    return null;
   }
 
   private propagateChange = (_: any) => { };
