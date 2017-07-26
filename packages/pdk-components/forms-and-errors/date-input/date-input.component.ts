@@ -157,14 +157,6 @@ export class DateInputComponent implements ControlValueAccessor, Validator {
     return DateInputComponent.DATE_FORMAT.test(val);
   }
 
-  private toDate(date: any): any {
-    if (typeof date === 'string') {
-      const [day, month, year] = date.split('-');
-      date = Date.UTC(+year, +month - 1, +day);
-    }
-    return new Date(date);
-  }
-
   private pad(num: any, padNum: number = 2): string {
     const val = num !== undefined ? num.toString() : '';
     return val.length >= padNum ? val : new Array(padNum - val.length + 1).join('0') + val;
