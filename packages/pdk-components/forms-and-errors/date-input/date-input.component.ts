@@ -9,39 +9,45 @@ import { ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validator } fro
       class="form-date">
     
       <div class="form-group form-group-day">
-        Day
-        <input class="form-control"
-               type="text"
-               name="dateDay"
-               autocomplete="off"
-               maxlength="2"
-               [value]="displayDay"
-               (change)="dayChange($event)"
-               (keyup)="dayChange($event)">
+        <label>
+          Day
+          <input class="form-control"
+                 type="text"
+                 name="dateDay"
+                 autocomplete="off"
+                 maxlength="2"
+                 [value]="displayDay"
+                 (change)="dayChange($event)"
+                 (keyup)="dayChange($event)">
+        </label>
       </div>
     
       <div class="form-group form-group-month">
-        Month
-        <input class="form-control"
-               type="text"
-               name="dateMonth"
-               autocomplete="off"
-               maxlength="2"
-               [value]="displayMonth"
-               (change)="monthChange($event)"
-               (keyup)="monthChange($event)">
+        <label>
+          Month
+          <input class="form-control"
+                 type="text"
+                 name="dateMonth"
+                 autocomplete="off"
+                 maxlength="2"
+                 [value]="displayMonth"
+                 (change)="monthChange($event)"
+                 (keyup)="monthChange($event)">
+        </label>
       </div>
     
       <div class="form-group form-group-year">
-        Year
-        <input class="form-control"
-               type="text"
-               name="dateYear"
-               autocomplete="off"
-               maxlength="4"
-               [value]="displayYear"
-               (change)="yearChange($event)"
-               (keyup)="yearChange($event)">
+        <label>
+          Year
+          <input class="form-control"
+                 type="text"
+                 name="dateYear"
+                 autocomplete="off"
+                 maxlength="4"
+                 [value]="displayYear"
+                 (change)="yearChange($event)"
+                 (keyup)="yearChange($event)">
+        </label>
       </div>
     </div>
   `,
