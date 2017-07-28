@@ -100,7 +100,7 @@ export class DateInputComponent implements ControlValueAccessor, Validator {
   }
 
   validate(control: FormControl) {
-    if (control.value && !this.isDateFormat(control.value)) {
+    if (control.value && !this.isDateFormat(this.getValueForValidation(control))) {
       return {
         pattern: 'Date is not valid'
       };
@@ -152,7 +152,7 @@ export class DateInputComponent implements ControlValueAccessor, Validator {
         this.year ? this.pad(this.year, 4) : '',
         this.month ? this.pad(this.month) : '',
         this.day ? this.pad(this.day) : ''
-      ].join('-') + 'T00:00:00';
+      ].join('-') + 'Z';
     }
     return null;
   }
@@ -166,6 +166,10 @@ export class DateInputComponent implements ControlValueAccessor, Validator {
   private pad(num: any, padNum: number = 2): string {
     const val = num !== undefined ? num.toString() : '';
     return val.length >= padNum ? val : new Array(padNum - val.length + 1).join('0') + val;
+  }
+
+  private getValueForValidation(control: any) {
+    return control.value.replace(/Z.*/, 'T00:00:00Z');
   }
 
 }
