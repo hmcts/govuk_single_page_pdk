@@ -1,6 +1,6 @@
 {
   "name": "@govuk/pdk-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "GOV.UK library of components for Angular (2 and beyond).",
   "main": "pdk-components.bundle.js",
   "jsnext:main": "pdk-components.module.js",
