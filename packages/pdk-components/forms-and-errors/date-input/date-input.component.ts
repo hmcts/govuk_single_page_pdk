@@ -149,7 +149,7 @@ export class DateInputComponent implements ControlValueAccessor, Validator {
   private viewValue(): string {
     if (this.day || this.month || this.year) {
       return [
-        this.year ? this.pad(this.year, 4) : '',
+        this.year ? this.year : '',
         this.month ? this.pad(this.month) : '',
         this.day ? this.pad(this.day) : ''
       ].join('-') + 'Z';
