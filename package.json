@@ -104,7 +104,7 @@
     "url-loader": "^0.5.7",
     "vinyl-fs": "^2.4.3",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^0.8.4",
     "wrench": "^1.5.9",
     "yargs": "^4.7.1"
